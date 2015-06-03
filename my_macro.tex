@@ -1,5 +1,3 @@
-
-
 % макросы для начала введения и заключения
 \newcommand{\Intro}{\addsec{Введение}}
 \ifthenelse{\value{worktype} > 1}{%
@@ -9,6 +7,12 @@
 \newcommand{\Conc}{\addsec{Заключение}}
 \ifthenelse{\value{worktype} > 1}{%
     \renewcommand{\Conc}{\addchap{Заключение}}%
+}
+
+% и еще постановку задачи
+\newcommand{\Task}{\addsec{Постановка задачи}}
+\ifthenelse{\value{worktype} > 1}{%
+    \renewcommand{\Task}{\addchap{Постановка задачи}}%
 }
 
 % Правильные значки для нестрогих неравенств и пустого множества
