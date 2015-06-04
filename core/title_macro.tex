@@ -4,7 +4,7 @@
 %\usepackage {showframe}
 
 % Вертикальные отступы на титульной странице
-\newcommand{\vgap}{\vspace{10pt}}
+\newcommand{\vgap}{\vspace{16pt}}
 
 % Помещение города и даты в нижний колонтитул
 \usepackage{scrlayer}
@@ -86,24 +86,21 @@
     \supervisor\\
     \ifthenelse{\value{worktype} = 2}{%
     Рецензент:\\
-    ученая степень, ученое звание [, должность]
+    ученая степень, ученое звание, должность
     И. О. Фамилия
     }{}
 	\end{flushright}
-\ifthenelse{\value{worktype} = 0}{
-\vspace{\fill}
-        \begin{flushleft}
-          \begin{tabular}{cc}
-            \underline{\hspace{4cm}}&\underline{\hspace{5cm}}\\
-            {\small оценка (рейтинг)} & {\small  подпись руководителя}\\
-          \end{tabular}
-          \\[1cm]
-%          Утверждаю:\\руководитель направления ФИИТ \underline{\hspace{4cm}}
-%В.\,С.\,Пилиди
-        \end{flushleft}
-}{}
-  	\vspace {\fill}
 
+    \ifthenelse{\value{worktype} = 0}{
+    \vspace{\fill}
+            \begin{flushleft}
+              \begin{tabular}{cc}
+                \underline{\hspace{4cm}}&\underline{\hspace{5cm}}\\
+                {\small оценка (рейтинг)} & {\small  подпись руководителя}\\
+              \end{tabular}
+            \end{flushleft}
+    }{}
+  	\vspace {\fill}
   %Ростов-на-Дону
 
     %\thedate
